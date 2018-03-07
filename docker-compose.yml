@@ -1,0 +1,13 @@
+version: '3.3'
+
+services: 
+  app: 
+    build: .
+    healthcheck: 
+      disable: true
+    volumes: &volumes
+      - .:/app
+    ports:
+      - "9090:80"
+    command: gatsby develop --host 0.0.0.0
+    tty: true
