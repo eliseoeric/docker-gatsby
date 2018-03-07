@@ -3,7 +3,7 @@
 set -e
 
 install_new_project() {
-	docker-compose run --rm cli gatsby new app
+	docker-compose run --rm app gatsby new app
 	mv app/* .
 	mv app/.gitignore .
 	rm -rf app 
